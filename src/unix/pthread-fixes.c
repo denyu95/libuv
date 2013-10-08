@@ -30,7 +30,7 @@
 */
 
 
-/*Android doesn't provide pthread_barrier_t for now.*/
+/*Android and cygwin don't provide pthread_barrier_t for now.*/
 #ifndef PTHREAD_BARRIER_SERIAL_THREAD
 
 #include "pthread-fixes.h"
