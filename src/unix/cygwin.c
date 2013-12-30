@@ -73,16 +73,15 @@ uint64_t uv_get_total_memory(void) {
   return (uint64_t) sysconf(_SC_PAGESIZE) * sysconf(_SC_PHYS_PAGES);
 }
 
-int uv_fs_event_init(uv_loop_t* loop,
-                     uv_fs_event_t* handle,
-                     const char* filename,
-                     uv_fs_event_cb cb,
-                     int flags) {
-  loop->counters.fs_event_init++;
-  return -UV_ENOSYS;
+int uv_fs_event_init(uv_loop_t* loop, uv_fs_event_t* handle,
+                     const char* filename, uv_fs_event_cb cb, int flags) {
+  return -ENOSYS;
 }
 
-
 void uv__fs_event_close(uv_fs_event_t* handle) {
+  assert(0 && "implement me");
+}
+
+void uv__io_poll(uv_loop_t* loop, int timeout) {
   assert(0 && "implement me");
 }
