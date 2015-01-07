@@ -64,3 +64,6 @@ ipch
 
 *.xcodeproj
 *.xcworkspace
+
+# when being installed into .
+/lib
